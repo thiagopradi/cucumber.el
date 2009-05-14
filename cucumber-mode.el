@@ -29,7 +29,7 @@
 ;;
 
 (defconst feature-mode-keywords
-  '("Feature" "Scenario", "Given", "Then", "When", "And"))
+  '("Característica" "Cenário", "Dado", "Então", "Quando", "E"))
 
 (cond
  ((featurep 'font-lock)
@@ -39,19 +39,17 @@
 
 (defconst feature-font-lock-keywords
   (list
-   '("^ *Feature:" (0 font-lock-keyword-face) (".*" nil nil (0 font-lock-type-face t)))
-   '("^ *Background:$" (0 font-lock-keyword-face))
-   '("^ *Scenario\\(?: Outline\\)?:" (0 font-lock-keyword-face) (".*" nil nil (0 font-lock-function-name-face t)))
-   '("^ *Given" . font-lock-keyword-face)
-   '("^ *When" . font-lock-keyword-face)
-   '("^ *Then" . font-lock-keyword-face)
-   '("^ *But" . font-lock-keyword-face)
-   '("^ *And" . font-lock-keyword-face)
+   '("^ *Característica:" (0 font-lock-keyword-face) (".*" nil nil (0 font-lock-type-face t)))
+   '("^ *Contexto:$" (0 font-lock-keyword-face))
+   '("^ *Cenário\\(?: Outline\\)?:" (0 font-lock-keyword-face) (".*" nil nil (0 font-lock-function-name-face t)))
+   '("^ *Dado" . font-lock-keyword-face)
+   '("^ *Quando" . font-lock-keyword-face)
+   '("^ *Então" . font-lock-keyword-face)
+   '("^ *E" . font-lock-keyword-face)
    '("^ *@.*" . font-lock-preprocessor-face)
    '("^ *\\(?:More \\)?Examples:" . font-lock-keyword-face)
    '("^ *#.*" 0 font-lock-comment-face t)
    ))
-
 
 ;;
 ;; Keymap
